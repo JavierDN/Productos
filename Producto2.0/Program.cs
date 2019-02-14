@@ -25,7 +25,7 @@ namespace Producto
             {
                 Console.WriteLine();
 
-                for (int j = 1; j <= articulo.Length; j++)
+                for (int j = 0; j <= articulo.Length; j++)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.Write(" - Articulo: ");
@@ -69,13 +69,10 @@ namespace Producto
             productos.FactorDeCostos();
             //Costo fijo por el usuario
             productos.DesplegarArticulo();
-            Console.WriteLine();
-            Console.Write("------------------------------------------------------------------------------------------------------------------------");
             Console.SetCursorPosition(5, 8);
             Console.Write("Totales: ");
             productos.totales();
-            //costo de produccion
-            productos.CostoDeProduccion();
+
             Console.ReadKey();
             Datos javixmelchor = new Datos();
             double sergioselacome = javixmelchor.granTotal;
