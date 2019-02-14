@@ -30,6 +30,7 @@ namespace Producto
         //Unidad del producto
         int[] unidadCosto = new int[2];
         int[] cantidades = new int[2];
+        int[] factorCosto = new int[2];
 
         public void Cantidad()
         {
@@ -67,6 +68,15 @@ namespace Producto
             }
             Console.SetCursorPosition(30, 8);
             Console.Write(acumulador);
+        }
+
+        public void totalCostoProduccion()
+        {
+            double costoProduccion = 0;
+            for (int i = 0; i < cantidades.Length; i++)
+            {
+                costoProduccion = cantidades[i] * (unidadCosto[i])
+            }
         }
 
         public void FactorDeCostos()
