@@ -75,12 +75,14 @@ namespace Producto
             double numero;
             numero = rnd.Next(5, 16);
 
-            for (int o = 0; o < unidadCosto.Length; o++)
+            for (int ca = 1; ca < costoFijo.Length; ca++)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.SetCursorPosition(58, 5 + o);
-                Console.Write(unidadCosto[o] * (numero/100));
+                Console.SetCursorPosition(58, 5 + ca);
+                Console.Write(costoFijo[ca] * (numero / 100));
             }
+
+
         }
 
         #endregion 
@@ -106,7 +108,7 @@ namespace Producto
 
         public void DesplegarArticulo()
         {
-            for(int ca = 1; ca < costoFijo.Length; ca++)
+            for(int ca = 0; ca < costoFijo.Length; ca++)
             {
                 Console.SetCursorPosition(82, 4 + ca);
                 Console.Write(costoFijo[ca]);
