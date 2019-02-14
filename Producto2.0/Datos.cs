@@ -126,7 +126,7 @@ namespace Producto
             }
         }
 
-        double granTotal = 0;
+        public double granTotal = 0;
 
         public void CostoDeProduccion()
         {
