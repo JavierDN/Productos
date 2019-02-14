@@ -72,7 +72,7 @@ namespace Producto
             Console.SetCursorPosition(5, 8);
             Console.Write("Totales: ");
             productos.totales();
-
+            productos.CostoDeProduccion();
             Console.ReadKey();
 
         }

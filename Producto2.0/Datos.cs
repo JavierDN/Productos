@@ -104,7 +104,7 @@ namespace Producto
         public void CostoArticulo()
         {
             int xx = 63;
-            for (int ca = 1; ca < costoFijo.Length; ca++)
+            for (int ca = 0; ca < costoFijo.Length; ca++)
             {
                 int yy = 1;
                 //Costo de los articulos
