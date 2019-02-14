@@ -74,6 +74,8 @@ namespace Producto
             productos.totales();
             productos.CostoDeProduccion();
             Console.ReadKey();
+            Datos javixmelchor = new Datos();
+            double sergioselacome = javixmelchor.granTotal;
 
         }
 
