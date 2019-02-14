@@ -30,7 +30,8 @@ namespace Producto
         //Unidad del producto
         int[] unidadCosto = new int[2];
         int[] cantidades = new int[2];
-        int[] factorCosto = new int[2];
+        int[] costoProduccion = new int[2];
+        double[] factorCostos = new int[2];
 
         public void Cantidad()
         {
@@ -75,7 +76,7 @@ namespace Producto
             double costoProduccion = 0;
             for (int i = 0; i < cantidades.Length; i++)
             {
-                costoProduccion = cantidades[i] * (unidadCosto[i])
+                costoProduccion = cantidades[i] * (unidadCosto[i]);
             }
         }
 
@@ -89,11 +90,11 @@ namespace Producto
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.SetCursorPosition(58, 5 + ca);
-                Console.Write(costoFijo[ca] * (numero / 100));
+                factorCostos[ca] = costoFijo[ca] * (numero / 100);
+                Console.Write(factorCostos[ca]);
             }
 
         }
-
         #endregion 
 
         #region //Costo de los Articulos
@@ -126,7 +127,10 @@ namespace Producto
 
         public void CostoDeProduccion()
         {
-
+            for (int i = 0; i < costoProduccion.Length; i++)
+            {
+                Console.WriteLine(cantidades[i] * (costoFijo[i] + factorCostos[i]));
+            }
         }
 
         #endregion
