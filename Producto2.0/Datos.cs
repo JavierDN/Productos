@@ -16,7 +16,6 @@ namespace Producto
             set { articulo = value; }
         }
 
-
         public Datos()
         {
             articulo = "";       
@@ -27,10 +26,10 @@ namespace Producto
             articulo = art;
         }
 
-      
         #region //Unidad del producto y Desplegar Cantidad
         //Unidad del producto
         int[] unidadCosto = new int[2];
+        int[] cantidades = new int[2];
 
         public void Cantidad()
         {
@@ -44,7 +43,7 @@ namespace Producto
                 Console.Write(" - Cantidad del articulo: ");
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.SetCursorPosition(51, y + o);
-                unidadCosto[o] = int.Parse(Console.ReadLine());
+                cantidades[o] = int.Parse(Console.ReadLine());
             }
         }
 
@@ -55,7 +54,7 @@ namespace Producto
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.SetCursorPosition(30, 5 + o);
 
-                Console.Write(unidadCosto[o]);
+                Console.Write(cantidades[o]);
             }
         }
         //Total de unidad producidas
@@ -64,7 +63,7 @@ namespace Producto
             int acumulador = 0;
             for (int o = 0; o < unidadCosto.Length; o++)
             {
-                acumulador = acumulador + unidadCosto[o];
+                acumulador += cantidades[o];
             }
             Console.SetCursorPosition(30, 8);
             Console.Write(acumulador);
