@@ -15,7 +15,7 @@ namespace Producto
             Console.Write("Practica Num. 1 --------El diseño se mostrara una vez completado los datos \n");
             Datos productos = new Datos();
             string[] Productos = new string[2];
-            string[] articulo = new string[2];
+            string[] articulo = new string[9];
             int i = 1;
             //
             string acumulador = "";
@@ -69,18 +69,16 @@ namespace Producto
             productos.FactorDeCostos();
             //Costo fijo por el usuario
             productos.DesplegarArticulo();
-            Console.SetCursorPosition(5, 8);
+            Console.WriteLine();
+            Console.Write("------------------------------------------------------------------------------------------------------------------------");
+            Console.SetCursorPosition(5,Console.CursorTop);
             Console.Write("Totales: ");
+            Console.SetCursorPosition(5, 105);
             productos.totales();
             productos.CostoDeProduccion();
+            Console.SetCursorPosition(101, 16);
+            Console.WriteLine(productos.granTotal);
             Console.ReadKey();
-            Datos javixmelchor = new Datos();
-            double sergioselacome = javixmelchor.granTotal;
-
-        }
-
-
-        
-
+        }  
     }
 }

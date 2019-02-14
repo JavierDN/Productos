@@ -28,11 +28,11 @@ namespace Producto
 
         #region //Unidad del producto y Desplegar Cantidad
         //Unidad del producto
-        int[] unidadCosto = new int[2];
-        int[] cantidades = new int[2];
-        int[] costoProduccion = new int[2];
-        double[] factorCostos = new double[2];
-        int[] costoFijo = new int[2];
+        int[] unidadCosto = new int[10];
+        int[] cantidades = new int[10];
+        int[] costoProduccion = new int[10];
+        double[] factorCostos = new double[10];
+        int[] costoFijo = new int[10];
 
 
         public void Cantidad()
@@ -67,9 +67,10 @@ namespace Producto
             int acumulador = 0;
             for (int o = 0; o < unidadCosto.Length; o++)
             {
+                Console.SetCursorPosition(30, 7 + o);
                 acumulador += cantidades[o];
             }
-            Console.SetCursorPosition(30, 8);
+            
             Console.Write(acumulador);
         }
 
@@ -106,10 +107,10 @@ namespace Producto
             int xx = 63;
             for (int ca = 0; ca < costoFijo.Length; ca++)
             {
-                int yy = 1;
+                int yy = 2;
                 //Costo de los articulos
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.SetCursorPosition(xx,1 + ca);
+                Console.SetCursorPosition(xx,2 + ca);
                 Console.Write(" - Costo del articulo: ");
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.SetCursorPosition(86, yy + ca);
@@ -121,7 +122,7 @@ namespace Producto
         {
             for(int ca = 0; ca < costoFijo.Length; ca++)
             {
-                Console.SetCursorPosition(82, 4 + ca);
+                Console.SetCursorPosition(82, 5 + ca);
                 Console.Write(costoFijo[ca]);
             }
         }
@@ -132,7 +133,7 @@ namespace Producto
         {
             for (int i = 0; i < costoProduccion.Length; i++)
             {
-                Console.SetCursorPosition(100, 5 + i);
+                Console.SetCursorPosition(101, 5 + i);
                 granTotal += cantidades[i] * (costoFijo[i] + factorCostos[i]);
                 Console.WriteLine(cantidades[i] * (costoFijo[i] + factorCostos[i]));
             }
