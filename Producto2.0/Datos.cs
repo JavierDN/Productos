@@ -126,11 +126,14 @@ namespace Producto
             }
         }
 
+        double granTotal = 0;
+
         public void CostoDeProduccion()
         {
             for (int i = 0; i < costoProduccion.Length; i++)
             {
-                Console.SetCursorPosition(100, 4 + i);
+                Console.SetCursorPosition(100, 5 + i);
+                granTotal += cantidades[i] * (costoFijo[i] + factorCostos[i]);
                 Console.WriteLine(cantidades[i] * (costoFijo[i] + factorCostos[i]));
             }
         }
