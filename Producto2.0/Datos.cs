@@ -92,7 +92,6 @@ namespace Producto
                 Console.Write(costoFijo[ca] * (numero / 100));
             }
 
-
         }
 
         #endregion 
